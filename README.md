@@ -1,4 +1,4 @@
-# lastfmrss
+# lastfmrss ッ
 RSS Feed of any last played tracks or loved tracks
 
 Reads the webpages of last.fm and returns your last played tracks in digestable RSS. 
