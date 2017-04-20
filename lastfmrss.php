@@ -35,12 +35,12 @@ header("Content-type: text/xml; charset=utf-8");
 
 $i = 0;
 foreach($html->find('.js-focus-controls-container') as $row) {
-	foreach($row->find('.js-playlink') as $content) {
-		$artist = $content->attr['data-artist-name'];
-		$title = $content->attr['data-track-name'];
-		$link = 'https://www.last.fm'. $content->attr['data-track-url'];
+	foreach($row->find('.chartlist-name') as $content) {
+		$artist = $content->find('a',0)->plaintext;
+-		$title = $content->find('a',1)->plaintext;
+-		$link = $content->find('a',1)->href;
 
-		$desc = str_replace("/user/{$user}/library", 'http://www.last.fm', $link);
+		$desc = 'https://www.last.fm'. $link;
 		$desc = '<a href="'.$desc.'">'.$artist.'</a>';
 	}
 	foreach($row->find('.chartlist-timestamp') as $timestamp) {
