@@ -1,3 +1,6 @@
+This project has been superseeded by https://github.com/xiffy/lfm
+The same functionality done better
+
 # lastfmrss ッ
 RSS Feed of any last played tracks or loved tracks
 
